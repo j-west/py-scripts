@@ -1,10 +1,10 @@
 #! python3
 # imageclip.py - Finds image url's on clipboard.
 
-# TODO: Specify size?
+# TODO: Specify size(?), List Options and choose(?)
 
 import re
-#import pyperclip
+import pyperclip
 
 imgREGEX = re.compile(r'''(
 	https			#start of line?
@@ -13,6 +13,15 @@ imgREGEX = re.compile(r'''(
 	\.jpg|png		#file type
 	)''', re.VERBOSE)
 
-mo = imgREGEX.findall('hereisaurlhttps://blabla.co.jpglololol')
+text=str(pyperclip.paste())
+matches = []
+for groups in imgREGEX.findall(text):
+	matches.append(groups[0])
 
-print(mo)
+if len(matches) > 0:
+	pyperclip.paste('\n'.join(matches))
+	print('Copied:')
+	print('\n'.join(matches))
+else:
+	print('No matches found.')
+	
