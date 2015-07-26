@@ -6,6 +6,8 @@
 #						-At least 1 digit
 
 import re
+
+#---Attempt at one Long REGEX---
 #charREGEX = re.compile(r'''(
 #		\S{8,}
 #		&[a-z]+
@@ -21,8 +23,8 @@ import re
 #else:
 #	print ('No. Try again.')
 
-#---Separate Logic Statements?---
 
+#---Separate Logic Statements?---
 charREGEX = re.compile(r'\S{8,}')
 lowerREGEX = re.compile(r'[a-z]+')
 upperREGEX = re.compile(r'[A-Z]+')
