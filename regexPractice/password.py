@@ -9,24 +9,6 @@
 import re, getpass
 #getpass: prompts user for password, imported for concealment.
 
-
-#---Attempt at one Long REGEX---
-#charREGEX = re.compile(r'''(
-#		\S{8,}
-#		&[a-z]+
-#		&[A-Z]+
-#		&[0-9]+
-#		&\W+
-#		)''', re.VERBOSE)
-
-#password = input()
-
-#if charREGEX.search(password):
-#	print('I will accept this.')
-#else:
-#	print ('No. Try again.')
-
-
 #---Separate Logic Statements?---
 charREGEX = re.compile(r'\S{8,}')
 lowerREGEX = re.compile(r'[a-z]+')
