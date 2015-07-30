@@ -2,8 +2,8 @@
 #  	password.py - Testing Password Strength w/ REGEX
 
 #	STRONG PASSWORD	 =	-8 or more characters
-#						-Both UPPER and lower case
-#						-At least 1 digit
+#				-Both UPPER and lower case
+#				-At least 1 digit
 
 #TODO: Find a way to combine these regex's.
 import re, getpass
